@@ -1,0 +1,13 @@
+[project]
+name = "metrics-explorer-mvp"
+version = "0.1.0"
+description = "Research agent with metrics exploration"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+    "claude-agent-sdk",
+    "typing",
+    "uuid>=1.30",
+]

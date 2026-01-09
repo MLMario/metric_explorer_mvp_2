@@ -1,0 +1,34 @@
+{
+  "hypothesis_id": "H4",
+  "hypothesis": "Mobile platforms (iOS and Android combined) experience disproportionate checkout flow issues, reducing their conversion rates and pulling down overall platform performance",
+  "causal_history": "Mobile checkout experiences are often more fragile due to screen size constraints and interaction differences. If the new checkout flow released on December 16th has platform-specific rendering issues, timeout problems, or touch-interaction bugs that primarily affect mobile users, their conversion rates would decline sharply. During the holiday shopping season, mobile often represents a significant share of traffic, so a mobile-specific checkout issue could cause a notable overall conversion rate decline starting December 17th.",
+  "evaluation": "SUPPORTED",
+  "iterations_performed": 4,
+  "summary_of_analysis_performed": "Iteration 1: Compared overall conversion rates by device type (web, iOS, Android) for baseline vs anomaly periods. Found web flat (+0.03%), iOS severely down (-55.51%), Android moderately down (-10.37%). Iteration 2: Detailed breakdown with absolute numbers showed iOS lost 1,026 orders despite gaining 8,338 sessions, indicating a severe per-session conversion collapse. Android showed more modest decline. Iteration 3: Daily trend analysis showed iOS consistently underperforming web on every single day (Dec 17-24), with zero exceptions. Pattern is stable at 2.17% daily avg vs web 5.38% avg. Iteration 4: Cross-dimensional analysis confirmed mobile impact is NOT category or user-type specific\u2014iOS consistently dropped -55% across all 4 product categories and both new/returning user types, strongly suggesting a platform-level issue rather than category-specific problem.",
+  "findings": [
+    {
+      "finding": "iOS conversion rate collapsed by 55.51% while Web remained flat at +0.03%",
+      "evidence": "iOS baseline CR: 4.89%, anomaly CR: 2.17% (-2.71 pp); Web baseline CR: 5.38%, anomaly CR: 5.38% (+0.00 pp)"
+    },
+    {
+      "finding": "iOS was 5.4x more severely impacted than Android; both mobile platforms under-performed Web",
+      "evidence": "iOS change: -55.51%; Android change: -10.37%; Web change: +0.03%. Mobile combined: -38.49%"
+    },
+    {
+      "finding": "iOS underperformed Web on 8 out of 8 days during anomaly period, showing consistent daily pattern",
+      "evidence": "iOS daily CR: 2.07-2.23% (avg 2.17%) vs Web daily CR: 5.26-5.57% (avg 5.38%) throughout Dec 17-24"
+    },
+    {
+      "finding": "Mobile conversion degradation is NOT category-specific; iOS impacted uniformly across all product categories",
+      "evidence": "Electronics: -55.5%, Fashion: -54.6%, Home: -56.3%, Groceries: -55.6% (iOS impact consistent across all 4 categories)"
+    },
+    {
+      "finding": "Mobile conversion degradation affects both new and returning users equally, suggesting platform-level issue",
+      "evidence": "iOS new users: -55.2%; iOS returning users: -55.5% (nearly identical impact across user types)"
+    },
+    {
+      "finding": "Absolute order volume loss: iOS lost approximately 1,026 fewer orders despite 8,338 additional sessions",
+      "evidence": "iOS baseline: 2,175 orders from 44,502 sessions; Anomaly: 1,149 orders from 52,840 sessions"
+    }
+  ]
+}

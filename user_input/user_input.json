@@ -1,0 +1,10 @@
+{
+  "business_context": "ShopMart is an online e-commerce marketplace that connects buyers with sellers across multiple product categories including electronics, fashion, home goods, and groceries. The platform operates via web and mobile apps (iOS and Android). Revenue is driven by transaction fees on completed orders.",
+  "target_metric": "conversion_rate",
+  "target_metric_calculation": "conversion_rate = total_orders / total_sessions. A session is counted when a user visits the site. An order is counted when a purchase is completed.",
+  "change_to_analyse": "Conversion rate dropped from 3.8% to 3.2% (a 15.8% relative decrease)",
+  "why_is_this_suspicious": "This is the largest week-over-week drop in 6 months. It coincides with the holiday shopping season when we typically see conversion rates increase, not decrease. Revenue is directly impacted.",
+  "date_of_change": "The drop started on December 17, 2024 and has persisted through December 24, 2024. The baseline period is December 10-16, 2024.",
+  "potential_explanation": "The product team released a new checkout flow on December 16th. There may be a bug or UX issue causing users to abandon checkout.",
+  "suggested_analysis": "Start by checking if the drop is consistent across all platforms (web, iOS, Android) or isolated to a specific platform. Also check if specific product categories are more affected."
+}

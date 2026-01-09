@@ -1,0 +1,34 @@
+{
+    "hypothesis_id": "H2",
+    "hypothesis": "New checkout flow creates friction for new users, causing their conversion rate to drop significantly while returning users are largely unaffected",
+    "causal_history": "New users are typically more sensitive to checkout friction and UX changes than returning users who are familiar with the old flow. A buggy or confusing new checkout flow released on December 16th could cause new user conversion to drop sharply on December 17th, while returning users maintain relatively stable conversion rates. If new users represent a meaningful portion of the conversion mix, this segment-level change would manifest as an overall conversion rate decline.",
+    "evaluation": "NOT_SUPPORTED",
+    "iterations_performed": 4,
+    "summary_of_analysis_performed": "Iteration 1: Analyzed overall conversion rates comparing baseline (Dec 10-16) vs anomaly (Dec 17-24) periods segmented by new vs returning users. Found new users dropped 21.0% (4.06% to 3.21%) and returning users dropped 20.7% (5.76% to 4.57%) - nearly identical declines. Iteration 2: Segmented analysis by device type revealed iOS experienced simultaneous 55.2% decline for new users and 55.5% for returning users (nearly identical), web showed minimal changes for both segments, and Android showed returning users actually more affected (-11.8%) than new users (-8.5%). Iteration 3: Examined daily temporal patterns and confirmed both user segments show the same sharp conversion rate decline starting on Dec 17, with identical relative differences maintained throughout the anomaly period. Iteration 4: Analyzed impact by product category and found that in 3 of 4 categories (Fashion, Home, Groceries), returning users experienced equal or greater decline than new users. Only Electronics showed new users slightly more affected (-22.0% vs -19.1%), but this single category cannot establish the broad pattern predicted by the hypothesis.",
+    "findings": [
+        {
+            "finding": "New and returning users experienced nearly identical overall conversion rate declines",
+            "evidence": "New users: 4.06% to 3.21% (-21.0%), Returning users: 5.76% to 4.57% (-20.7%). Absolute difference in relative change: only 0.3 percentage points."
+        },
+        {
+            "finding": "iOS platform shows equal impact on both user segments despite being where largest decline occurred",
+            "evidence": "iOS new users declined 55.2%, iOS returning users declined 55.5%. Difference: 0.3 percentage points. This contradicts the hypothesis that new users should be significantly more affected."
+        },
+        {
+            "finding": "Android platform shows returning users were actually more affected than new users",
+            "evidence": "Android new users: -8.5%, Android returning users: -11.8%. Returning users experienced 3.3 percentage points greater relative decline."
+        },
+        {
+            "finding": "Web platform shows minimal impact on both segments with no clear differential effect",
+            "evidence": "Web new users: -2.4%, Web returning users: +0.7%. Both segments essentially unchanged, providing no support for hypothesis."
+        },
+        {
+            "finding": "Returning users were more affected than or equal to new users in 3 of 4 product categories",
+            "evidence": "Fashion (new -20.2% vs returning -21.5%), Home (new -19.9% vs returning -21.8%), Groceries (new -20.7% vs returning -20.4%). Only Electronics showed new users more affected (-22.0% vs -19.1%)."
+        },
+        {
+            "finding": "Both user segments show synchronized decline starting Dec 17 with maintained similar conversion rate gap",
+            "evidence": "Baseline daily gap average: 1.70 percentage points (new 4.06% vs returning 5.76%). Anomaly daily gap average: 1.36 percentage points (new 3.21% vs returning 4.57%). No widening of gap that would indicate differential impact."
+        }
+    ]
+}

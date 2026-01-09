@@ -1,0 +1,26 @@
+[
+    {
+        "hypothesis_id": "H1",
+        "target_metric": "conversion_rate",
+        "hypothesis": "Checkout flow bug disproportionately impacts web platform, reducing its conversion rate and dragging down overall platform conversion rate",
+        "causal_history": "The product team released a new checkout flow on December 16th. If this new checkout has a bug or UX issue on the web platform specifically, users attempting to complete purchases on web would abandon at higher rates. Since web likely represents a significant portion of traffic, this could explain the 15.8% relative decrease in overall conversion rate starting December 17th. This hypothesis aligns with the user's potential explanation and suggested analysis to check platform-level differences."
+    },
+    {
+        "hypothesis_id": "H2",
+        "target_metric": "conversion_rate",
+        "hypothesis": "New checkout flow creates friction for new users, causing their conversion rate to drop significantly while returning users are largely unaffected",
+        "causal_history": "New users are typically more sensitive to checkout friction and UX changes than returning users who are familiar with the old flow. A buggy or confusing new checkout flow released on December 16th could cause new user conversion to drop sharply on December 17th, while returning users maintain relatively stable conversion rates. If new users represent a meaningful portion of the conversion mix, this segment-level change would manifest as an overall conversion rate decline."
+    },
+    {
+        "hypothesis_id": "H3",
+        "target_metric": "conversion_rate",
+        "hypothesis": "Checkout flow bug is triggered by specific product categories (electronics or fashion), causing users in those high-traffic categories to abandon checkout",
+        "causal_history": "The new checkout flow released on December 16th may have compatibility issues with specific product types or may have changed category-specific flows. If electronics and fashion categories (likely high-traffic categories during holiday shopping) are experiencing increased checkout abandonment due to the bug, their conversion rates would drop. If these categories represent a material portion of overall traffic, the weighted average conversion rate would decline starting December 17th."
+    },
+    {
+        "hypothesis_id": "H4",
+        "target_metric": "conversion_rate",
+        "hypothesis": "Mobile platforms (iOS and Android combined) experience disproportionate checkout flow issues, reducing their conversion rates and pulling down overall platform performance",
+        "causal_history": "Mobile checkout experiences are often more fragile due to screen size constraints and interaction differences. If the new checkout flow released on December 16th has platform-specific rendering issues, timeout problems, or touch-interaction bugs that primarily affect mobile users, their conversion rates would decline sharply. During the holiday shopping season, mobile often represents a significant share of traffic, so a mobile-specific checkout issue could cause a notable overall conversion rate decline starting December 17th."
+    }
+]
